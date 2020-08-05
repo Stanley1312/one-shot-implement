@@ -7,4 +7,9 @@ https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-ker
 ## Dataset
 
 The Arabic Dataset: https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d
+
 The Omnilog Dataset: https://github.com/brendenlake/omniglot
+
+To make the architecture of Arabic dataset similar to the Omnilog dataset, use [fix_data](fix-dataset.py) function and the function [prepare_augmentation](fix-dataset.py) for balancing the amout of images in each class.
+
+
