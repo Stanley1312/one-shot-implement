@@ -12,6 +12,7 @@ The Omnilog Dataset: https://github.com/brendenlake/omniglot
 
 To make the architecture of Arabic dataset similar to the Omnilog dataset, use [Seperate_arabic_dataset](fix-dataset.py) function and the function [prepare_augmentation](fix-dataset.py) for balancing the amout of images in each class.
 
+### Dataset Structure
 ![Alt text](https://github.com/Stanley1312/one-shot-implement/blob/master/dataset.PNG?raw=true "Dataset Structure")
 
 
