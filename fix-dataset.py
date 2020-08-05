@@ -9,17 +9,21 @@ import argparse
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-d","--data_dir",required=True,help="path to the dataset")
-ap.add_argument("-n","--new_path",help="path to the new folder for Arabic dataset")
+ap.add_argument("-n","--prepare_path",help="path to the new folder for Arabic dataset")
+ap.add_argument("-a","--arabic_path",help="path of the arabic dataset")
+
 args = vars(ap.parse_args())
 
 """dataset path for fixing and augmenting data such as train and validation path in dataset folder"""
 dataset_path = args["data_dir"]
 """ new path for sorting the Arabic dataset"""
-new_path = args["new_path"]
+prepare_path = args["prepare_path"]
+""" new path for sorting the Arabic dataset"""
+arabic_path = args["arabic_path"]
 
 
 
-def fix_data(dataset_path):
+def Seperate_arabic_dataset(arabic_path):
     """ Seperate the Arabic Dataset follow the label name"""
     for train in os.listdir(dataset_path):
         list_file = []
@@ -37,10 +41,10 @@ def fix_data(dataset_path):
                 print("Image is exists")
             else:
                 shutil.move(old_path,dir_path)
-def prepare_augmentation(dataset_path):
+def prepare_augmentation(prepare_path):
     """ Guarantee the image of each class of dataset are 20 images"""
     for alphabet in os.listdir(path):
-        newalpha_path = os.path.join(new_path,alphabet)
+        newalpha_path = os.path.join(prepare_path,alphabet)
         if os.path.exists(newalpha_path):
             print("----Aphabetpath is exists----------")
         else:
@@ -69,10 +73,12 @@ def augment_data(dataset_path):
             letter_path = os.path.join(alphabet_path,letter)            
             augmented_data = load_batch_augment(letter_path)
             for i, augmented in enumerate(augmented_data):
-                imageio.imwrite(os.path.join(letter_path,"%d.jpg" % (i,)),augmented)
+                imageio.imwrite(os.path.join(letter_path,"augmented-%d.jpg" % (i,)),augmented)
     print("[INFO]:Done augmenting data...............")
 
 augment_data(dataset_path)
-if new_path:
-    prepare_augmentation(dataset_path)
+if prepare_path:
+    prepare_augmentation(prepare_path)
+if arabic_path:
+    Seperate_arabic_dataset(arabic_path)
 
