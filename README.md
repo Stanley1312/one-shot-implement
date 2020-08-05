@@ -1,6 +1,6 @@
 # one-shot-implement
 
-This project hosts the code for implementing the FCOS algorithm for object detection, as presented in this blog:
+This project hosts the code for implementing the One-shot learning for Hand-written Letter detection, as presented in this blog:
 
 https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d
 
