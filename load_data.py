@@ -8,8 +8,7 @@ import time
 import numpy.random as rng
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-t","--train_dir",required=True,help="path to the train dataset")
-ap.add_argument("-v","--val_dir",required=True,help="path to the val dataset")
+ap.add_argument("-v","--data_dir",required=True,help="path to the dataset")
 ap.add_argument("-n","--name",default="augmented",help="name of the pickle file")
 ap.add_argument("-s","--save_path",required=True,help="path to the save folder for pickle file")
 args = vars(ap.parse_args())
@@ -63,9 +62,11 @@ def loadimgs(path,n = 0):
     X = np.stack(X)
     return X,y,lang_dict
 
-
-Xtrain,ytrain,c = loadimgs(args["train_dir"])
-Xval,yval,cval=loadimgs(args["val_dir"])
+for data in os.listdir(args["data_dir"]):
+    if data == "train":
+        Xtrain,ytrain,c = loadimgs(args["data_dir"],data)
+    if data == "val":
+        Xval,yval,cval=loadimgs(args["data_dir"],data)
 
 with open(os.path.join(args["save_path"],"train-{}.pickle".format(args["name"])), "wb") as f:
     pickle.dump((Xtrain,c),f)
