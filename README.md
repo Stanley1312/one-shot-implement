@@ -16,7 +16,7 @@ To make the architecture of Arabic dataset similar to the Omnilog dataset, use [
 ![Alt text](https://github.com/Stanley1312/one-shot-implement/blob/master/data.PNG?raw=true "Dataset Structure")
 
 ## Testing 
-Using file [One_shot](One_shot.ibpy) for testing model
+Using file [One_shot](One_shot.ipynb) for testing model
 
 Model Link : https://drive.google.com/file/d/1W7793XyxYXXaJPKDbOgBvv68WTaVEBMo/view?usp=sharing
 
