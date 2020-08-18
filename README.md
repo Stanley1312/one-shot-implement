@@ -6,7 +6,7 @@ https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-ker
 
 ## Dataset
 
-The Arabic Dataset: https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d
+The Arabic Dataset: https://www.kaggle.com/mloey1/ahcd1
 
 The Omnilog Dataset: https://github.com/brendenlake/omniglot
 
