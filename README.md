@@ -18,7 +18,7 @@ To make the architecture of Arabic dataset similar to the Omnilog dataset, use [
 ## Testing 
 Using file [One_shot](One_shot.ipynb) for testing model
 
-Model Link : https://drive.google.com/file/d/1W7793XyxYXXaJPKDbOgBvv68WTaVEBMo/view?usp=sharing
+Model's weight Link : https://drive.google.com/file/d/11f8CX9hZtgaK8tiYL-ZSWxqruL3E30rh/view?usp=sharing
 
 Pickle File link: 
 
