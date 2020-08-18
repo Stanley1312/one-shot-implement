@@ -22,9 +22,8 @@ Model's weight Link : https://drive.google.com/file/d/11f8CX9hZtgaK8tiYL-ZSWxqru
 
 Pickle File link: 
 
-- Validation data : https://drive.google.com/file/d/10gungFNSZwSq_A3zOu__EIJKnmOTvJxz/view?usp=sharing 
+- Validation data : https://drive.google.com/file/d/1zpkBcrncBC3IX5ANWRovBuaTaC9GKVHs/view?usp=sharing
 
-- Training data : https://drive.google.com/file/d/1g76oH2beboTefAwIBuqsSY8j2dN2f4MB/view?usp=sharing
-
+- Training data : https://drive.google.com/file/d/1I3UK5G1FhpDbbGwD061vDIG1nFtSWgzO/view?usp=sharing
 
 
